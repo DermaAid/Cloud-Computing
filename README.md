@@ -5,7 +5,7 @@ This repository contains the code for the **DermaAid-Cloud-Computing** project.
 
 ### Base URL  
 - **Development**: `http://localhost:3000`  
-- **Production**: ``  
+- **Production**: `https://backend-457365178940.asia-southeast2.run.app`  
 
 ---
 
