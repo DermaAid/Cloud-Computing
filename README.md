@@ -33,7 +33,7 @@ Register a new user.
     "password": "string",
     "dob": "yyyy-mm-dd"
 }
-Response (status code: 201):
+**Response (status code: 201)**:
 {
     "message": "User Successfully Created"
 }
