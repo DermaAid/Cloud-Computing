@@ -27,6 +27,28 @@ This repository contains the code for the **DermaAid-Cloud-Computing** project.
   }
 - **Response**: Status Code: 201 Created
   ```json
-{
-    "message": "User Successfully Created"
-}
+  {
+      "message": "User Successfully Created"
+  }
+
+#### 2. Login  
+- **Endpoint**: `POST /api/auth/login`  
+- **Description**: Authenticate user and generate a token.  
+- **Request Body**:  
+  ```json
+  {
+      "email": "string",
+      "password": "string",
+  }
+- **Status Code**: 200 OK
+  ```json
+  {
+    "message": "Login Successfully",
+    "data": {
+        "fullName": "string",
+        "email": "string",
+        "mobileNumber": "string",
+        "dob": "YYYY-MM-DD"
+    },
+    "token": "<jwt-token>"
+  }
