@@ -15,7 +15,8 @@ COPY . .
 
 # Salin variabel lingkungan dari file .env (untuk produksi)
 ENV NODE_ENV production
-
+ENV MODEL_URL="https://storage.googleapis.com/mlgc-dimaz/model.json"
+ENV PROJECT_ID="submissionmlgc-dimazardawan"
 # Tentukan port yang digunakan
 EXPOSE 3000
 
