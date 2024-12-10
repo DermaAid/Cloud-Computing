@@ -27,7 +27,7 @@ This repository contains the code for the **DermaAid-Cloud-Computing** project.
   }
 Response:
 Status Code: 201 Created
-
+json
 {
     "message": "User Successfully Created"
 }
