@@ -33,7 +33,10 @@ Register a new user.
     "password": "string",
     "dob": "yyyy-mm-dd"
 }
+Response (status code: 201):
 
+json
+Copy code
 {
     "message": "User Successfully Created"
 }
@@ -47,6 +50,7 @@ Authenticate user and generate a token.
 Request Body:
 
 json
+Copy code
 {
     "email": "string",
     "password": "string"
@@ -54,6 +58,7 @@ json
 Response (status code: 200):
 
 json
+Copy code
 {
     "message": "Login Successfully",
     "data": {
@@ -73,12 +78,14 @@ Request a password reset.
 Request Body:
 
 json
+Copy code
 {
     "email": "string"
 }
 Response (status code: 200):
 
 json
+Copy code
 {
     "message": "Password reset link sent to email."
 }
@@ -93,12 +100,14 @@ Retrieve user details by user ID.
 Headers:
 
 json
+Copy code
 {
     "Authorization": "Bearer <jwt-token>"
 }
 Response (status code: 200):
 
 json
+Copy code
 {
     "fullName": "string",
     "email": "string",
@@ -117,12 +126,14 @@ Add a diagnosis history record.
 Headers:
 
 json
+Copy code
 {
     "Authorization": "Bearer <jwt-token>"
 }
 Request Body:
 
 json
+Copy code
 {
     "imageUrl": "string",
     "result": "string"
@@ -130,6 +141,7 @@ json
 Response (status code: 201):
 
 json
+Copy code
 {
     "message": "Diagnosis history added successfully."
 }
@@ -150,6 +162,7 @@ Copy code
 Response (status code: 200):
 
 json
+Copy code
 [
     {
         "historyId": "string",
@@ -169,6 +182,7 @@ Retrieve all news articles.
 Response (status code: 200):
 
 json
+Copy code
 [
     {
         "newsId": "string",
@@ -187,6 +201,7 @@ Retrieve a news article by its ID.
 Response (status code: 200):
 
 json
+Copy code
 {
     "newsId": "string",
     "title": "string",
@@ -204,12 +219,14 @@ Interact with the chatbot.
 Request Body:
 
 json
+Copy code
 {
     "message": "string"
 }
 Response (status code: 200):
 
 json
+Copy code
 {
     "response": "string"
 }
