@@ -37,3 +37,179 @@ Register a new user.
 {
     "message": "User Successfully Created"
 }
+2. Login
+Endpoint:
+POST /api/auth/login
+
+Description:
+Authenticate user and generate a token.
+
+Request Body:
+
+json
+{
+    "email": "string",
+    "password": "string"
+}
+Response (status code: 200):
+
+json
+{
+    "message": "Login Successfully",
+    "data": {
+        "fullName": "string",
+        "email": "string",
+        "userId": "string"
+    },
+    "token": "<jwt-token>"
+}
+3. Forgot Password
+Endpoint:
+POST /api/auth/forgot-password
+
+Description:
+Request a password reset.
+
+Request Body:
+
+json
+{
+    "email": "string"
+}
+Response (status code: 200):
+
+json
+{
+    "message": "Password reset link sent to email."
+}
+User Data
+1. Get User Details
+Endpoint:
+GET /api/users/:userId
+
+Description:
+Retrieve user details by user ID.
+
+Headers:
+
+json
+{
+    "Authorization": "Bearer <jwt-token>"
+}
+Response (status code: 200):
+
+json
+{
+    "fullName": "string",
+    "email": "string",
+    "dob": "yyyy-mm-dd",
+    "mobileNumber": "string",
+    "createdAt": "timestamp"
+}
+Diagnosis History
+1. Add Diagnosis History
+Endpoint:
+POST /api/history
+
+Description:
+Add a diagnosis history record.
+
+Headers:
+
+json
+{
+    "Authorization": "Bearer <jwt-token>"
+}
+Request Body:
+
+json
+{
+    "imageUrl": "string",
+    "result": "string"
+}
+Response (status code: 201):
+
+json
+{
+    "message": "Diagnosis history added successfully."
+}
+2. Get Diagnosis Histories
+Endpoint:
+GET /api/history/:userId
+
+Description:
+Retrieve diagnosis histories for a specific user.
+
+Headers:
+
+json
+Copy code
+{
+    "Authorization": "Bearer <jwt-token>"
+}
+Response (status code: 200):
+
+json
+[
+    {
+        "historyId": "string",
+        "imageUrl": "string",
+        "result": "string",
+        "createdAt": "timestamp"
+    }
+]
+News
+1. Get All News
+Endpoint:
+GET /api/news
+
+Description:
+Retrieve all news articles.
+
+Response (status code: 200):
+
+json
+[
+    {
+        "newsId": "string",
+        "title": "string",
+        "content": "string",
+        "createdAt": "timestamp"
+    }
+]
+2. Get News by ID
+Endpoint:
+GET /api/news/:newsId
+
+Description:
+Retrieve a news article by its ID.
+
+Response (status code: 200):
+
+json
+{
+    "newsId": "string",
+    "title": "string",
+    "content": "string",
+    "createdAt": "timestamp"
+}
+Chatbot
+1. Ask Chatbot
+Endpoint:
+POST /api/chatbot
+
+Description:
+Interact with the chatbot.
+
+Request Body:
+
+json
+{
+    "message": "string"
+}
+Response (status code: 200):
+
+json
+{
+    "response": "string"
+}
