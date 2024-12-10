@@ -34,7 +34,6 @@ Register a new user.
     "dob": "yyyy-mm-dd"
 }
 Response (status code: 201):
-Copy code
 {
     "message": "User Successfully Created"
 }
