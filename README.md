@@ -25,7 +25,6 @@ This repository contains the code for the **DermaAid-Cloud-Computing** project.
 Register a new user.
 
 **Request Body**:  
-```json
 {
     "fullName": "string",
     "email": "string",
@@ -33,8 +32,9 @@ Register a new user.
     "password": "string",
     "dob": "yyyy-mm-dd"
 }
+
 Response (status code: 201):
-```json
+
 {
     "message": "User Successfully Created"
 }
