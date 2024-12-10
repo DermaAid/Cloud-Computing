@@ -1,4 +1,3 @@
-// Mengimpor Firebase SDK versi 9 dan lebih baru (modular)
 const { initializeApp } = require('firebase/app');
 const { getFirestore } = require('firebase/firestore');
 require('dotenv').config(); // Menggunakan dotenv untuk membaca file .env
