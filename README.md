@@ -54,7 +54,7 @@ This repository contains the code for the **DermaAid-Cloud-Computing** project.
   }
 
 #### 3. Forgot Password   
-A. Request Password Reset
+#### A. Request Password Reset
 - **Endpoint**: `POST /api/auth/forgot-password`  
 - **Description**: Send a password reset link to the user’s email.  
 - **Request Body**:  
@@ -68,7 +68,7 @@ A. Request Password Reset
     "message": "Password reset link sent to email."
   }
 
-B. Reset Password
+#### B. Reset Password
 - **Endpoint**: `PATCH /api/auth/reset-password`  
 - **Request Body**:  
   ```json
