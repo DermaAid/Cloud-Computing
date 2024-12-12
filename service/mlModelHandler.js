@@ -3,7 +3,7 @@ const path = require('path');
 
 // Muat model ML
 const loadModel = async () => {
-  const modelPath = path.join(__dirname, '../model.json'); // Sesuaikan path model Anda
+  const modelPath = path.join(__dirname, '../model.json'); 
   const model = await tf.loadLayersModel(`file://${modelPath}`);
   return model;
 };
