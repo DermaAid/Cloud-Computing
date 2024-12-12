@@ -1,8 +1,8 @@
 // services/modelLoader.js
 
-const tf = require('@tensorflow/tfjs-node'); // pastikan sudah mengimport tfjs-node
+const tf = require('@tensorflow/tfjs-node'); 
 
-const modelPath = 'file://./model.json'; // Menggunakan path relatif jika file berada di folder yang sama
+const modelPath = 'file://./model.json'; 
 
 
 async function loadModel() {
@@ -11,4 +11,4 @@ async function loadModel() {
   return model;
 }
 
-module.exports = loadModel; // export fungsi untuk digunakan di tempat lain
+module.exports = loadModel; 
