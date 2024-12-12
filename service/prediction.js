@@ -1,7 +1,7 @@
 // services/prediction.js
 
-const tf = require('@tensorflow/tfjs-node'); // pastikan sudah mengimport tfjs-node
-const loadModel = require('./modelLoader'); // pastikan sudah mengimport fungsi loadModel
+const tf = require('@tensorflow/tfjs-node'); 
+const loadModel = require('./modelLoader');
 
 async function makePrediction(model, inputData) {
   const inputTensor = tf.tensor(inputData); // Membuat tensor dari input
@@ -10,6 +10,6 @@ async function makePrediction(model, inputData) {
 }
 
 // Contoh input data
-const inputData = [/* data sesuai dengan input model Anda */];
+const inputData = [/* data sesuai dengan input model */];
 
 loadModel().then(model => makePrediction(model, inputData));
