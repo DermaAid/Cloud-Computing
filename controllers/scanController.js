@@ -11,7 +11,7 @@ exports.uploadImage = async (req, res) => {
     // Simpan hasil diagnosis ke database
     const diagnosis = {
       userId,
-      imageUrl: 'http://example.com/image.jpg', // Sesuaikan dengan URL gambar
+      imageUrl: 'http://example.com/image.jpg', 
       result: result[0], // Prediksi dari model
       createdAt: new Date(),
     };
